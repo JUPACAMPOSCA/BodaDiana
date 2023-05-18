@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <title>Nos Casamos</title>
     <style>
         body {
@@ -48,7 +49,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            color: #400000;
+            color: #773f3f;
             font-family: 'Dancing Script', cursive;
             font-size: 5em;
             z-index: 1;
@@ -61,7 +62,8 @@
             left: 50%;
             transform: translate(-50%, 60%);
             text-align: center;
-            color: goldenrod;
+            color: white;
+            /* color: goldenrod; */
             font-family: 'Lora', serif;
             font-size: 3em;
             z-index: 1;
@@ -109,6 +111,14 @@
             padding: 0px 15px;
             text-align: center;
             font-family: 'Frank Ruhl Libre', serif;
+            font-size: 1.5em;
+        }
+        
+        .cuenta-regresiva {
+            position: relative;
+            padding: 0px 15px;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
             font-size: 1.5em;
         }
 
@@ -180,16 +190,16 @@
 <body>
     <div class="background-container">
         <div class="background-image"></div>
-        <div class="background-text">
-            <p>Nuestra Boda</p>
-        </div>
-        <div class="anillos-img">
-            <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/anillos-de-boda.png" alt="anillos">
-        </div>
         <div class="background-text2">
             <p class="izq">Diana</p>
             <p>y</p>
             <p class="der">Josué</p>
+        </div>
+        <div class="anillos-img">
+            <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/anillos-de-boda.png" alt="anillos">
+        </div>
+        <div class="background-text">
+            <p>Nuestra Boda</p>
         </div>
     </div>
     <div class="bienvenida">
@@ -265,6 +275,17 @@
     <div class="separador">
         <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/separador.png" alt="separador">
     </div>
+    <div class="cuenta-regresiva">
+        <p style="font-family: 'Noto Serif JP', serif; font-size: medium;"> CUENTA REGRESIVA </p>
+        <label style="font-family: 'Dancing Script', cursive;" id="days"></label> días
+        <label style="font-family: 'Dancing Script', cursive;" id="hours"></label> :
+        <label style="font-family: 'Dancing Script', cursive;" id="minutes"></label> :
+        <label style="font-family: 'Dancing Script', cursive;" id="seconds"></label>
+    </div>
+
+    <div class="separador">
+        <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/separador.png" alt="separador">
+    </div>
     <div class="bienvenida">
         <p>SUGERENCIAS DE HOSPEDAJE</p>
         <br>
@@ -281,6 +302,7 @@
     <div class="separador">
         <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/separador.png" alt="separador">
     </div>
+
     <div class="bienvenida">
         <p>Su presencia es el mejor regalo para nosotros, agradecemos mucho su apoyo para el inicio de esta nueva etapa.</p>
         <p>MESA DE REGALOS</p>
@@ -314,26 +336,6 @@
     <div class="desp" style="background-color: white;">
         <p>No Faltes</p>
     </div>
-
-
-    <table>
-        <tr>
-            <td>Días:</td>
-            <td id="days"></td>
-        </tr>
-        <tr>
-            <td>Horas:</td>
-            <td id="hours"></td>
-        </tr>
-        <tr>
-            <td>Minutos:</td>
-            <td id="minutes"></td>
-        </tr>
-        <tr>
-            <td>Segundos:</td>
-            <td id="seconds"></td>
-        </tr>
-    </table>
 
     <script>
         $(window).scroll(function () {
