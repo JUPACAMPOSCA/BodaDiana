@@ -17,6 +17,7 @@
             margin: 0;
             padding: 0;
             /* background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fondo.jpg'); */
+            /* https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fondo.jpg */
             background-color: whitesmoke;
             background-repeat: repeat-y;
             background-size: 100% auto;
@@ -26,6 +27,18 @@
             position: relative;
             width: 100%;
             height: 100vh;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fondo.jpg');
+            background-size: cover;
+            background-position: center center;
+            z-index: -1;    
         }
 
         .background-text {
@@ -166,6 +179,7 @@
 
 <body>
     <div class="background-container">
+        <div class="background-image"></div>
         <div class="background-text">
             <p>Nuestra Boda</p>
         </div>
