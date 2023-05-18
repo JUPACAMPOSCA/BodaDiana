@@ -16,7 +16,8 @@
         body {
             margin: 0;
             padding: 0;
-           /*  background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fondo.jpg'); */
+            /* background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fondo.jpg'); */
+            background-color: whitesmoke;
             background-repeat: repeat-y;
             background-size: 100% auto;
         }
@@ -47,9 +48,18 @@
             left: 50%;
             transform: translate(-50%, 60%);
             text-align: center;
-            color: dimgray;
+            color: goldenrod;
             font-family: 'Lora', serif;
             font-size: 3em;
+            z-index: 1;
+        }
+
+        .anillos-img img {
+            position: absolute;
+            width: 20%;
+            top: calc(100vh - 60%);
+            left: 50%;
+            transform: translate(-50%, -50%);
             z-index: 1;
         }
 
@@ -158,6 +168,9 @@
     <div class="background-container">
         <div class="background-text">
             <p>Nuestra Boda</p>
+        </div>
+        <div class="anillos-img">
+            <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/anillos-de-boda.png" alt="anillos">
         </div>
         <div class="background-text2">
             <p class="izq">Diana</p>
@@ -277,7 +290,7 @@
         <br>
     </div>
     <div class="bienvenida">
-        <p style="font-size: small;">Una vez que confirmes tu asistencia te enviaremos tu pase digital.</p>
+        <p style="font-size: small;">Una vez que confirmes tu asistencia te enviaremos el pase digital.</p>
     </div>
     <div class="bienvenida">
         <p style="font-family: 'Noto Serif JP', serif; font-size: medium;">CÓDIGO DE VESTIMENTA</p>
@@ -289,7 +302,7 @@
     </div>
 
 
-    <!-- <table>
+    <table>
         <tr>
             <td>Días:</td>
             <td id="days"></td>
@@ -306,7 +319,7 @@
             <td>Segundos:</td>
             <td id="seconds"></td>
         </tr>
-    </table> -->
+    </table>
 
     <script>
         $(window).scroll(function () {
@@ -321,7 +334,7 @@
             });
         });
 
-        /* function countdown(endDate) {
+        function countdown(endDate) {
             const daysElem = document.getElementById('days');
             const hoursElem = document.getElementById('hours');
             const minutesElem = document.getElementById('minutes');
@@ -346,7 +359,7 @@
             setInterval(updateCountdown, 1000);
         }
 
-        countdown(new Date('Nov 04, 2023 04:30:00')); */
+        countdown(new Date('Nov 04, 2023 04:30:00'));
     </script>
 </body>
 
