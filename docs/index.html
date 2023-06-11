@@ -14,10 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <title>Nos Casamos</title>
     <style>
+        @font-face {
+            font-family: "darleston"; /* Elige un nombre para tu fuente */
+            src: url("./Darleston.otf") format("opentype"); /* Ajusta la ruta a la ubicación de tu fuente */
+        }
         body {
             margin: 0;
             padding: 0;
-            background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fondo-textura.jpg');
+            background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fondoConBlanco.png');
             /* https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fondo.jpeg */
             background-color: white;
             background-repeat: repeat-y;
@@ -49,9 +53,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            color: #773f3f;
-            font-family: 'Dancing Script', cursive;
-            font-size: 5em;
+            color: white;
+            font-family: 'Times New Roman', cursive;
+            font-size: 3em;
             z-index: 1;
         }
 
@@ -60,12 +64,25 @@
             width: 270px;
             top: calc(100vh - 90%);
             left: 50%;
-            transform: translate(-50%, 60%);
+            transform: translate(-50%, 270%);
             text-align: center;
             color: white;
             /* color: goldenrod; */
-            font-family: 'Lora', serif;
-            font-size: 3em;
+            font-family: 'darleston';
+            font-size: 4em;
+            z-index: 1;
+        }
+
+        .cuenta-regresiva {
+            position: absolute;
+            width: 80%;
+            top: calc(100vh - 90%);
+            left: 50%;
+            transform: translate(-50%, 400%);
+            text-align: center;
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
             z-index: 1;
         }
 
@@ -111,14 +128,6 @@
             padding: 0px 15px;
             text-align: center;
             font-family: 'Frank Ruhl Libre', serif;
-            font-size: 1.5em;
-        }
-        
-        .cuenta-regresiva {
-            position: relative;
-            padding: 0px 15px;
-            text-align: center;
-            font-family: 'Dancing Script', cursive;
             font-size: 1.5em;
         }
 
@@ -193,15 +202,26 @@
     <div class="background-container">
         <div class="background-image"></div>
         <div class="background-text2">
-            <p class="izq">Diana</p>
-            <p>y</p>
-            <p class="der">Josué</p>
+            <div>
+                Diana y Josúe
+            </div>
+            <!-- <div class="izq">Diana</div>
+            <div> Y </div>
+            <div class="der">Josué</div> -->
         </div>
         <!-- <div class="anillos-img">
             <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/anillos-de-boda.png" alt="anillos">
         </div> -->
         <div class="background-text">
-            <p>Nuestro Boda</p>
+            <p>Nuestra Boda</p>
+        </div>
+        
+        <div class="cuenta-regresiva">
+            <p style="font-family: 'Noto Serif JP', serif; font-weight: 550; font-size: x-large;;"> CUENTA REGRESIVA </p>
+            <label style="font-family: 'Dancing Script', cursive;" id="days"></label> días
+            <label style="font-family: 'Dancing Script', cursive;" id="hours"></label> :
+            <label style="font-family: 'Dancing Script', cursive;" id="minutes"></label> :
+            <label style="font-family: 'Dancing Script', cursive;" id="seconds"></label>
         </div>
     </div>
     <div class="bienvenida">
@@ -210,17 +230,7 @@
     <div class="separador">
         <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/separador.png" alt="separador">
     </div>
-    <div class="cuenta-regresiva">
-        <p style="font-family: 'Noto Serif JP', serif; font-weight: 550; font-size: x-large; color: #400000;"> CUENTA REGRESIVA </p>
-        <label style="font-family: 'Dancing Script', cursive;" id="days"></label> días
-        <label style="font-family: 'Dancing Script', cursive;" id="hours"></label> :
-        <label style="font-family: 'Dancing Script', cursive;" id="minutes"></label> :
-        <label style="font-family: 'Dancing Script', cursive;" id="seconds"></label>
-    </div>
-
-    <div class="separador">
-        <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/separador.png" alt="separador">
-    </div>
+    
     <div class="bienvenida">
         <p>JUNTO A NUESTROS PADRES</p>
         <br>
@@ -338,7 +348,7 @@
         <p>Formal</p>
         <p style="font-size: small;">Mujeres no usar blanco</p>
     </div>
-    <div class="desp" style="background-color: wheat;">
+    <div class="desp">
         <p>No Faltes</p>
     </div>
 
@@ -350,6 +360,10 @@
                 'top': 'calc(100vh + ' + (scroll / 10) + 'vh - 80%)'
             });
             $('.background-text2').css({
+                'opacity': 1 - (scroll / 400),
+                'top': 'calc(100vh + ' + (scroll / 10) + 'vh - 90%)'
+            });
+            $('.cuenta-regresiva').css({
                 'opacity': 1 - (scroll / 400),
                 'top': 'calc(100vh + ' + (scroll / 10) + 'vh - 90%)'
             });
