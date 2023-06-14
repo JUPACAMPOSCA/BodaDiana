@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
@@ -22,10 +23,33 @@
             padding: 0;
             background-color: white;
         }
+
+        .bienvenida {
+            position: relative;
+            text-align: center;
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 1.5em;
+        }
+        
+        .bg-fondo-textura {
+            background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fondo-textura.jpg');
+            background-size: 100% auto;
+            height: fit-content; 
+            padding: 20px 20px;
+        }
+        
+        .bg-fondo-textura {
+            background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fondo-textura.jpg');
+            background-size: 100% auto;
+            height: fit-content; 
+            padding: 20px 20px;
+        }
         
         .bg-fondo-imagen {
             background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fondoImagen.avif');
             background-size: 100% auto;
+            height: fit-content; 
+            padding: 20px 20px;
         }
 
         .background-container {
@@ -123,13 +147,7 @@
             animation: mover-derecha-centro 1.5s ease-out;
         }
 
-        .bienvenida {
-            position: relative;
-            padding: 0px 15px;
-            text-align: center;
-            font-family: 'Frank Ruhl Libre', serif;
-            font-size: 1.5em;
-        }
+        
 
         .separador {
             display: flex;
@@ -188,9 +206,15 @@
         }
 
         .desp {
-            font-size: 30px;
+            font-size: 40px;
             font-family: 'Dancing Script', cursive;
             text-align: center;
+        }
+
+        .centro-times {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: larger;
         }
     </style>
 </head>
@@ -224,7 +248,7 @@
             <label style="font-family: 'Dancing Script', cursive;" id="seconds"></label>
         </div>
     </div>
-    <div class="bienvenida bg-fondo-imagen" style="height: 300px;">
+    <div class="bienvenida bg-fondo-textura" style="font-family: 'Amatic SC', cursive;">
         <p>"EL AMOR NUNCA SE DA POR VENCIDO, JAMÁS PIERDE LA FÉ, SIEMPRE TIENE ESPERANZAS Y SE MANTIENE FIRME EN TODA CIRCUNSTANCIA"</p>
     </div>
     
@@ -237,23 +261,23 @@
         <p> María de Jesús Casillas Jiménez </p>
         <p> Juan Campos Hernández </p>
         <br>
-        <br>
         <div class="novios">
             <img style=" width: 60px; height: auto;" src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/novio.png" alt="novio">
         </div>
         <p> Lucina Olvera Carrillo </p>
         <p> José Domingo Barrón Ávila </p>
         <br>
-        <p> Y NUESTROS PADRINOS </p>
-        <br> 
-        <p> Mariana de Jesús Huerta Cárdenas </p>
-        <p> y </p>
-        <p> José Guadalupe Campos Hernández </p>
+        <div class="bg-fondo-imagen">
+        <p> Y NUESTROS PADRINOS </p> 
+            <p> Mariana de Jesús Huerta Cárdenas </p>
+            <p> y </p>
+            <p> José Guadalupe Campos Hernández </p>
+        </div>
     </div>
-    <!-- <div class="separador">
-        <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/separador.png" alt="separador">
-    </div> -->
+
     <br>
+    <br>
+    
     <div class="bienvenida">
         <div> TENEMOS EL HONOR DE INVITARLE A LA CELEBRACIÓN DE NUESTRO MATRIMONIO EL DÍA </div>
     </div>
@@ -261,33 +285,30 @@
         <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fecha.png" alt="fecha">
     </div>
 
-    <br>
-    <br>
-    <br>
-    
-    <div class="novios" style="display: flex; justify-content: center;">
-        <img style="width: 60px; height: auto;" src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/iglesia.png" alt="iglesia">
-    </div>
-    
-    <div class="bienvenida">
-        <p style="font-family: 'Noto Serif JP', serif; font-size: medium;"> CEREMONIA RELIGIOSA </p>
-        TEMPLO
-        <p> SAN RAFAEL ARCÁNGEL </p>
-        4:30 PM
-    </div>
-    <br>
-    <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-        <p> Jardín Diamante N°45, Ciudad del Valle, </p>
-        <p> Tepic, Nayarit. </p>
-    </div>
-    <br>
-    <div style="display: flex; flex-direction: column; align-items: center;">
-        <a href="https://goo.gl/maps/mAWrVrLyMvgvo4x79" class="btn">Ubicación</a>
+    <div class="bg-fondo-imagen">
+
+        
+        <div class="novios" style="display: flex; justify-content: center;">
+            <img style="width: 60px; height: auto;" src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/iglesia.png" alt="iglesia">
+        </div>
+        
+        <div class="bienvenida">
+            <p style="font-family: 'Noto Serif JP', serif; font-size: medium;"> CEREMONIA RELIGIOSA </p>
+            TEMPLO
+            <p> SAN RAFAEL ARCÁNGEL </p>
+            4:30 PM
+        </div>
+        <br>
+        <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+            <p> Jardín Diamante N°45, Ciudad del Valle, </p>
+            <p> Tepic, Nayarit. </p>
+        </div>
+        <br>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <a href="https://goo.gl/maps/mAWrVrLyMvgvo4x79" class="btn">Ubicación</a>
+        </div>
     </div>
 
-    <br>
-    <br>
-    <br>
     <br>
     <br>
     
@@ -308,59 +329,54 @@
         <a href="https://goo.gl/maps/FmCr7Gnv5yL1NLHe8?coh=178571&entry=tt" class="btn">Ubicación</a>
     </div>
     <br>
-    <div class="bienvenida">
-        <p>SUGERENCIAS DE HOSPEDAJE</p>
-        <p>Hotel Nekié Tepic</p>
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <a href="https://goo.gl/maps/yBHM8eLSXMYYog7q9" class="btn">Ubicación</a>
-        </div>
-        <br>
-        <p>Hotel Aztlan</p>
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <a href="https://goo.gl/maps/Kp7dyCRQ7GAYbtAy6" class="btn">Ubicación</a>
+
+    <div class="bg-fondo-imagen">
+
+        <div class="bienvenida">
+            <p>SUGERENCIAS DE HOSPEDAJE</p>
+            <p>Hotel Nekié Tepic</p>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <a href="https://goo.gl/maps/yBHM8eLSXMYYog7q9" class="btn">Ubicación</a>
+            </div>
+            <p>Hotel Aztlan</p>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <a href="https://goo.gl/maps/Kp7dyCRQ7GAYbtAy6" class="btn">Ubicación</a>
+            </div>
         </div>
     </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <div class="bienvenida">
         <p>Su presencia es el mejor regalo para nosotros, agradecemos mucho su apoyo para el inicio de esta nueva etapa.</p>
-
-        <br>
-        <br>
-        <br>
-
-        <p>MESA DE REGALOS</p>
-        <div class="liverpool" style="display: flex; justify-content: center;">
-            <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/logo-liverpool.png" alt="iglesia">
-        </div>
-        <P>Evento no. 51153377</P>
     </div>
-    <div class="desp">
-        <p>Confirma tu asistencia</p>
-    </div>
-    <div class="bienvenida">
-        <div style="margin: 0 auto; width: 220px">
-            <!-- <P style="margin: 5px;">Diana</P> -->
-            <a href="https://wa.me/523112554464?text=Hola, confirmo mi asistencia." class="btn">¡CLICK AQUÍ!</a>
+    
+    <div class="bg-fondo-imagen">
+
+        <div class="bienvenida">
+            <p>MESA DE REGALOS</p>
+            <div class="liverpool" style="display: flex; justify-content: center;">
+                <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/logo-liverpool.png" alt="iglesia">
+            </div>
+            <P>Evento no. 51153377</P>
         </div>
-        <!-- <div style="margin: 0 auto; width: 220px">
-            <P style="margin: 5px;">Josué</P>
-            <a href="https://wa.me/3344178922?text=Hola, confirmo mi asistencia." class="btn">¡CLICK AQUÍ!</a>
-        </div> -->
+        <div class="centro-times">
+            Confirma tu asistencia
+        </div>
         <br>
+        <div class="bienvenida">
+            <div style="margin: 0 auto; width: 220px">
+                <a href="https://wa.me/523112554464?text=Hola, confirmo mi asistencia." class="btn">¡CLICK AQUÍ!</a>
+            </div>
+            <br>
+        </div>
     </div>
     <div class="bienvenida">
         <p style="font-family: 'Noto Serif JP', serif; font-size: medium;">CÓDIGO DE VESTIMENTA</p>
         <p>Formal</p>
     </div>
-    <div class="desp">
-        <p>No Faltes</p>
+    <div class="bg-fondo-imagen">
+        <div class="desp">
+            No Faltes
+        </div>
     </div>
 
     <script>
