@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300&display=swap" rel="stylesheet">
     <title>Nos Casamos</title>
     <style>
         @font-face {
@@ -29,13 +30,6 @@
             text-align: center;
             font-family: 'Frank Ruhl Libre', serif;
             font-size: 1.5em;
-        }
-        
-        .bg-fondo-textura {
-            background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fondo-textura.jpg');
-            background-size: 100% auto;
-            height: fit-content; 
-            padding: 20px 20px;
         }
         
         .bg-fondo-textura {
@@ -64,7 +58,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/fondo.jpeg');
+            background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/principal.jpg');
             background-size: cover;
             background-position: center center;
             z-index: -1;    
@@ -73,11 +67,11 @@
         .background-text {
             position: absolute;
             width: 270px;
-            top: calc(100vh - 80%);
+            top: calc(100vh - 70%);
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            color: white;
+            color: black;
             font-family: 'Times New Roman', cursive;
             font-size: 3em;
             z-index: 1;
@@ -86,11 +80,11 @@
         .background-text2 {
             position: absolute;
             width: 270px;
-            top: calc(100vh - 90%);
+            top: calc(100vh - 80%);
             left: 50%;
             transform: translate(-50%, 270%);
             text-align: center;
-            color: white;
+            color: black;
             /* color: goldenrod; */
             font-family: 'darleston';
             font-size: 4em;
@@ -104,7 +98,7 @@
             left: 50%;
             transform: translate(-50%, 400%);
             text-align: center;
-            color: white;
+            color: black;
             font-family: 'Dancing Script', cursive;
             font-size: 2em;
             z-index: 1;
@@ -248,30 +242,30 @@
             <label style="font-family: 'Dancing Script', cursive;" id="seconds"></label>
         </div>
     </div>
-    <div class="bienvenida bg-fondo-textura" style="font-family: 'Amatic SC', cursive;">
+    <br>
+    <div class="bienvenida" style="font-family: 'Amatic SC', cursive;">
         <p>"EL AMOR NUNCA SE DA POR VENCIDO, JAMÁS PIERDE LA FÉ, SIEMPRE TIENE ESPERANZAS Y SE MANTIENE FIRME EN TODA CIRCUNSTANCIA"</p>
     </div>
-    
-    <div class="bienvenida">
-        <p>JUNTO A NUESTROS PADRES</p>
-        <br>
+    <div class="separador">
+        <img src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/separador.png" alt="separador">
+    </div>
+    <div class="bienvenida bg-fondo-textura" style="margin: 10px; border: 1px solid black;">
+        <p style="font-family: 'Merienda', cursive;">junto a nuestros padres</p>
+
         <div class="novios">
             <img style=" width: 60px; height: auto;" src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/novia.png" alt="novia">
         </div>
-        <p> María de Jesús Casillas Jiménez </p>
-        <p> Juan Campos Hernández </p>
-        <br>
+        <p> María de Jesús Casillas Jiménez <br>
+         Juan Campos Hernández </p>
         <div class="novios">
             <img style=" width: 60px; height: auto;" src="https://raw.githubusercontent.com/JUPACAMPOSCA/BodaDiana/master/docs/novio.png" alt="novio">
         </div>
-        <p> Lucina Olvera Carrillo </p>
-        <p> José Domingo Barrón Ávila </p>
-        <br>
-        <div class="bg-fondo-imagen">
-        <p> Y NUESTROS PADRINOS </p> 
-            <p> Mariana de Jesús Huerta Cárdenas </p>
-            <p> y </p>
-            <p> José Guadalupe Campos Hernández </p>
+        <p> Lucina Olvera Carrillo <br>
+            José Domingo Barrón Ávila </p>
+        <div class="">
+        <p style="font-family: 'Merienda', cursive;"> y nuestros padrinos </p> 
+            <p> Mariana de Jesús Huerta Cárdenas <br>
+             José Guadalupe Campos Hernández </p>
         </div>
     </div>
 
@@ -384,11 +378,11 @@
             var scroll = $(window).scrollTop();
             $('.background-text').css({
                 'opacity': 1 - (scroll / 400),
-                'top': 'calc(100vh + ' + (scroll / 10) + 'vh - 80%)'
+                'top': 'calc(100vh + ' + (scroll / 10) + 'vh - 70%)'
             });
             $('.background-text2').css({
                 'opacity': 1 - (scroll / 400),
-                'top': 'calc(100vh + ' + (scroll / 10) + 'vh - 90%)'
+                'top': 'calc(100vh + ' + (scroll / 10) + 'vh - 80%)'
             });
             $('.cuenta-regresiva').css({
                 'opacity': 1 - (scroll / 400),
